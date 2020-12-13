@@ -20,15 +20,15 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>_development
+  database: <%= ENV['DB_ROOM'] %>_development
   timeout: 5000
 test:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>_test
+  database: <%= ENV['DB_ROOM'] %>_test
 
 staging:
   adapter: postgresql
-  database: <%= ENV['DB_NAME'] %>
+  database: <%= ENV['DB_ROOM'] %>
   host: <%= ENV['DB_HOST'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
